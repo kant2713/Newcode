@@ -122,3 +122,18 @@ ul li.active a{
     left: 50%;
     color:#fff;
   }
+.project-head{
+    position: absolute;
+    font-size: 20px;
+    top:30%;
+    left: 50%;
+     color:#fff;    
+}
+  .project{
+    top: 40%;
+    left: 50%;
+    color:#fff;
+  }
+   
+
+  
