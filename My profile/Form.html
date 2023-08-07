@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script>
+    function submitFeedback() {
+      const name = document.getElementById("name").value;
+      const contact = document.getElementById("contact").value;
+      const feedback = document.getElementById("feedback").value;
+      const feedbackDisplay = document.getElementById("feedback-display");
+      feedbackDisplay.innerHTML = "Thank you " + name + ", " + contact + " for your valuable feedback";
+    }
+  </script>
+</head>
+<body>
+    <header>
+  
+
+  <form id="feedback-form" onsubmit="submitFeedback(); return false;">
+    <label>Name:</label><br>
+    <input type="text" id="name" required><br>
+    <label>Contact Number:</label><br>
+    <input type="text" id="contact" required><br>
+    <label>Feedback:</label><br>
+    <textarea id="feedback" required></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2 id="feedback-display"></h2>
+</header>
+</body>
+</html>

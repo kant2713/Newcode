@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hobbies</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="hob">
+            <h1><i>HOBBIES</i></h1>
+            </div>
+
+  <form id="hobbies-form">
+    <label><input type="checkbox" name="hobby" value="Hobby 1">Dancing</label><br>
+    <label><input type="checkbox" name="hobby" value="Hobby 2">Cricket</label><br>
+    <label><input type="checkbox" name="hobby" value="Hobby 3">Basketball</label><br>
+    <button type="button" onclick="showSelectedHobbies()">Learn More</button>
+  </form>
+
+  <div id="hobbies-description"></div>
+
+  <script>
+    function showSelectedHobbies() {
+      const form = document.getElementById("hobbies-form");
+      const selectedHobbies = [];
+      const checkboxes = form.querySelectorAll('input[name="hobby"]:checked');
+      checkboxes.forEach((checkbox) => {
+        selectedHobbies.push(checkbox.value);
+      });
+      const descriptionDiv = document.getElementById("hobbies-description");
+      descriptionDiv.innerHTML = "<h3>Selected Hobbies:</h3><p>" + selectedHobbies.join(", ") + "</p>";
+    }
+  </script>
+  </header>
+</body>
+</html>
